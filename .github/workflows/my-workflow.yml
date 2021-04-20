@@ -23,7 +23,7 @@ jobs:
 
       - name: ha-ha
         uses: ./.github/actions/joke-action
-        if: jokes
+        id: jokes
 
       - name: create-issue
         uses: ./.github/actions/issue-maker
