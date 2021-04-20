@@ -3,7 +3,9 @@
 name: JS Actions
 
 # Controls when the action will run. 
-on: [push]
+on:
+  pull_request:
+    types: [labeled]
 
 jobs:
   action:
@@ -18,3 +20,6 @@ jobs:
           #first-greeting: "Learning Lab User"
           #second-greeting: "New boy"
           third-greeting: "Problem child#"
+
+      - name: ha-ha
+        uses: ./.github/actions/joke-action
